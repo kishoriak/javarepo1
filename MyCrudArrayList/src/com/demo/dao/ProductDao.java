@@ -11,5 +11,8 @@ public interface ProductDao {
 	List<Product> getAllProducts();
 
 	Product searchById(int id);
+	int deleteProduct(int id);
+	void displayById(int id);
+	void modify(int id, int qty);
 
 }

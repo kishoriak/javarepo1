@@ -11,5 +11,9 @@ public interface ProductService {
 	List<Product> displayAll();
 
 	Product searchProduct(int id);
+	
+	int deleteProd(int id);
+	void displayById(int id);
+	void modify(int id, int qty);
 
 }
