@@ -12,4 +12,10 @@ public interface ProductDao {
 
 	Product searchById(int id);
 
+	boolean deleteProduct(int id);
+
+	Product displayById(int id);
+
+	boolean modifyProduct(int id, String name, int qty);
+
 }
