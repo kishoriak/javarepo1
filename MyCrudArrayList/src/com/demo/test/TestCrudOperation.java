@@ -14,7 +14,7 @@ public class TestCrudOperation {
 		int choice=0;
 		ProductService productService=new ProductServiceImpl();
 		do {
-		System.out.println("1. add \n2.search\n3display all\n4. delete\n5.display by id\n7. modify qty\n7. exit");
+		System.out.println("1. add \n2.search\n3. display all\n4. delete\n5.display by id\n6. modify qty\n7. exit");
 		System.out.println("choice");
 		choice=sc.nextInt();
 		switch(choice) {
@@ -22,7 +22,7 @@ public class TestCrudOperation {
 			productService.addProduct();
 			break;
 		case 2:
-			System.out.println("enetr id");
+			System.out.println("enter id");
 			int id=sc.nextInt();
 			Product p=productService.searchProduct(id);
 			if(p!=null) {
@@ -39,6 +39,13 @@ public class TestCrudOperation {
 			}
 			break;
 		case 4:
+			System.out.println("enter id");
+			id=sc.nextInt();
+			p=productService.searchProduct(id);
+			if(p!=null) {
+				
+			}
+			
 			break;
 		case 5:
 			break;
@@ -48,7 +55,7 @@ public class TestCrudOperation {
 			sc.close();
 			System.exit(0);
 		}
-		}while(choice!=6);
+		}while(choice!=7);
 		
 
 	}

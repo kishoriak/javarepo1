@@ -39,6 +39,13 @@ public class ProductServiceImpl implements ProductService {
 	public Product searchProduct(int id) {
 		return productDao.searchById(id);
 	}
+
+	@Override
+	public void deleteProduct(int id) {
+		productDao.searchById(id);
+		
+	}
+	
 	
 
 }
