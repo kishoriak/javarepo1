@@ -14,7 +14,7 @@ public class TestCrudOperation {
 		int choice=0;
 		ProductService productService=new ProductServiceImpl();
 		do {
-		System.out.println("1. add \n2.search\n3display all\n4. delete\n5.display by id\n7. modify qty\n7. exit");
+		System.out.println("1. add \n2.search\n3display all\n4. delete\n5.display by id\n6. modify qty\n7. exit");
 		System.out.println("choice");
 		choice=sc.nextInt();
 		switch(choice) {
@@ -39,10 +39,20 @@ public class TestCrudOperation {
 			}
 			break;
 		case 4:
+			System.out.println("enter id to delete");
+			id=sc.nextInt();
+			productService.deleteProduct(id);
 			break;
 		case 5:
+			System.out.println("enter id ");
+			id=sc.nextInt();
+			p=productService.displayById(id);
+			System.out.println(p);
 			break;
 		case 6:
+			System.out.println("Enter id to modify Product data ");
+			id=sc.nextInt();
+			productService.modifyProduct(id);
 			break;
 		case 7:
 			sc.close();

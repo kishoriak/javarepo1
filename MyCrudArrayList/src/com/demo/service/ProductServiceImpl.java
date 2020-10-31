@@ -14,10 +14,9 @@ public class ProductServiceImpl implements ProductService {
 		productDao=new ProductDaoImpl();
 		
 	}
-
+	Scanner sc=new Scanner(System.in);
 	@Override
 	public void addProduct() {
-		Scanner sc=new Scanner(System.in);
 		System.out.println("enter id");
 		int id=sc.nextInt();
 		
@@ -38,6 +37,28 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public Product searchProduct(int id) {
 		return productDao.searchById(id);
+	}
+
+	@Override
+	public void deleteProduct(int id) {
+		productDao.deleteProduct(id);
+	}
+
+	@Override
+	public Product displayById(int id) {
+		return productDao.displayById(id);
+	}
+
+	@Override
+	public void modifyProduct(int id) {
+		System.out.println("enter modified name ");
+		String mname=sc.next();
+		System.out.println("enter modified price ");
+		int mprice=sc.nextInt();
+		deleteProduct(id);
+		Product p=new Product(id,mname,mprice);
+		productDao.addProduct(p);
+		
 	}
 	
 

@@ -12,4 +12,10 @@ public interface ProductService {
 
 	Product searchProduct(int id);
 
+	void deleteProduct(int id);
+
+	Product displayById(int id);
+
+	void modifyProduct(int id);
+
 }
