@@ -11,5 +11,11 @@ public interface ProductService {
 	List<Product> displayAll();
 
 	Product searchProduct(int id);
+	
+	void deleteProduct(int id);
+	
+	Product display(int id);
+	
+	void modify(int id, int qty);
 
 }
