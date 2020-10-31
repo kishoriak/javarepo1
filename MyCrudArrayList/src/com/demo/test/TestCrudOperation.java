@@ -42,9 +42,7 @@ public class TestCrudOperation {
 			System.out.println("enter id");
 			id=sc.nextInt();
 			p=productService.searchProduct(id);
-			if(p!=null) {
-				
-			}
+			
 			
 			break;
 		case 5:
