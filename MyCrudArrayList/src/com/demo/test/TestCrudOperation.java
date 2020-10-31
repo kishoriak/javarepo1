@@ -41,7 +41,7 @@ public class TestCrudOperation {
 		case 4:
 			System.out.println("enter id");
 			id=sc.nextInt();
-			p=productService.searchProduct(id);
+			productService.deleteProduct(id);
 			
 			
 			break;

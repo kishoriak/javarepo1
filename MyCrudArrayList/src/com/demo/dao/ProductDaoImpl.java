@@ -33,4 +33,9 @@ public class ProductDaoImpl implements ProductDao{
 		return null;
 	}
 
+	public void deleteProduct(int id) {
+		plist.remove(id);
+		
+	}
+
 }
