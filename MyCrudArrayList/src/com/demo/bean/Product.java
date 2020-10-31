@@ -4,16 +4,11 @@ public class Product {
 	private int id;
 	private String name;
 	private int qty;
+	
 	public Product() {
 		super();
 	}
 	
-	public boolean equals(Object ob) {
-		if(id==((Product)ob).id) {
-			return true;
-		}
-		return false;
-	}
 	
 	public Product(int id, String name, int qty) {
 		super();
@@ -43,6 +38,14 @@ public class Product {
 	public String toString() {
 		return "Product [id=" + id + ", name=" + name + ", qty=" + qty + "]";
 	}
+	
+	public boolean equals(Object ob) {
+		if(id==((Product)ob).id) {
+			return true;
+		}
+		return false;
+	}
+	
 	
 
 }

@@ -23,7 +23,7 @@ public class ProductServiceImpl implements ProductService {
 		
 		System.out.println("enter name");
 		String nm=sc.next();
-		System.out.println("enter id");
+		System.out.println("enter qty");
 		int qty=sc.nextInt();
 		Product p=new Product(id,nm,qty);
 		productDao.addProduct(p);
@@ -38,6 +38,18 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public Product searchProduct(int id) {
 		return productDao.searchById(id);
+	}
+
+	@Override
+	public void deleteProduct(Product p) {
+		productDao.delProduct(p);
+		
+	}
+
+	@Override
+	public void modifyProductQty(Product q, int qt) {
+		productDao.modifyProdQty(q,qt);
+		
 	}
 	
 

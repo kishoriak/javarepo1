@@ -12,4 +12,8 @@ public interface ProductDao {
 
 	Product searchById(int id);
 
+	void delProduct(Product p);
+
+	void modifyProdQty(Product q, int qt);
+
 }
