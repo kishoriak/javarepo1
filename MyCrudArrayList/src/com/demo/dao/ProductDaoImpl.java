@@ -8,7 +8,7 @@ import com.demo.bean.Product;
 public class ProductDaoImpl implements ProductDao{
 	static List<Product> plist;
 	static {
-		plist=new ArrayList<>();
+		plist=new ArrayList<Product>();
 		plist.add(new Product(12,"chair",2000));
 		plist.add(new Product(13,"table",3000));
 	}
@@ -31,6 +31,18 @@ public class ProductDaoImpl implements ProductDao{
 			return plist.get(pos);
 		}
 		return null;
+	}
+
+	@Override
+	public void delProduct(Product p) {
+		plist.remove(p);
+		
+	}
+
+	@Override
+	public void modifyProdQty(Product q, int qt) {
+		q.setQty(qt);
+		
 	}
 
 }
