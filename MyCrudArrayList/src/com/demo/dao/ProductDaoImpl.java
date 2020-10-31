@@ -33,4 +33,30 @@ public class ProductDaoImpl implements ProductDao{
 		return null;
 	}
 
+	@Override
+	public void deleteProduct(int id) {
+		// TODO Auto-generated method stub
+		int pos=plist.indexOf(new Product(id, null, 0));
+		if(pos!=-1) {
+			plist.remove(pos);
+		}
+	}
+
+	@Override
+	public Product display(int id) {
+		// TODO Auto-generated method stub
+		int pos=plist.indexOf(new Product(id, null, 0));
+		Product p=plist.get(pos);
+		return p;
+	}
+
+	@Override
+	public void modify(int id, int qty) {
+		// TODO Auto-generated method stub
+		int pos=plist.indexOf(new Product(id, null, 0));
+		plist.get(pos).setQty(qty);
+	}
+	
+	
+
 }

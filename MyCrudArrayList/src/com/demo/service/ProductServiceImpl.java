@@ -39,6 +39,24 @@ public class ProductServiceImpl implements ProductService {
 	public Product searchProduct(int id) {
 		return productDao.searchById(id);
 	}
+
+	@Override
+	public void deleteProduct(int id) {
+		// TODO Auto-generated method stub
+		productDao.deleteProduct(id);
+	}
+
+	@Override
+	public Product display(int id) {
+		// TODO Auto-generated method stub
+		return productDao.display(id);
+	}
+
+	@Override
+	public void modify(int id, int qty) {
+		// TODO Auto-generated method stub
+		productDao.modify(id, qty);
+	}
 	
 
 }
