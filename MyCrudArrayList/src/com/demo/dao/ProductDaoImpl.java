@@ -33,4 +33,16 @@ public class ProductDaoImpl implements ProductDao{
 		return null;
 	}
 
+	@Override
+	public int deleteProduct(Product p1) {
+		int size=plist.size();
+		plist.remove(p1);
+		if(plist.size()<size) {
+			return 1;
+		}
+		else 
+			return 0;
+	}
+
+
 }

@@ -12,4 +12,7 @@ public interface ProductService {
 
 	Product searchProduct(int id);
 
+	int  deleteProduct(Product p1);
+
+
 }

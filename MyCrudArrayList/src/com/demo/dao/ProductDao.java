@@ -12,4 +12,7 @@ public interface ProductDao {
 
 	Product searchById(int id);
 
+	int deleteProduct(Product p1);
+	
+
 }
