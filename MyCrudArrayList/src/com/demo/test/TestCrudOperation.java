@@ -14,7 +14,7 @@ public class TestCrudOperation {
 		int choice=0;
 		ProductService productService=new ProductServiceImpl();
 		do {
-		System.out.println("1. add \n2.search\n3. display all\n4. delete\n5.display by id\n6. modify qty\n7. exit");
+		System.out.println("1. Add \n2. Search\n3. Display all\n4. delete\n5. Display by id\n6. Modify\n7. Exit");
 		System.out.println("choice");
 		choice=sc.nextInt();
 		switch(choice) {
@@ -46,8 +46,24 @@ public class TestCrudOperation {
 			
 			break;
 		case 5:
+			System.out.println("enter id");
+			id=sc.nextInt();
+			System.out.println(productService.displayById(id));
 			break;
 		case 6:
+			System.out.println("enter id");
+			id=sc.nextInt();
+			System.out.println("enter name");
+			String name=sc.next();
+			System.out.println("enter qty");
+			int qty=sc.nextInt();
+			boolean status=productService.modifyData(id,name,qty);
+			if(status) {
+				System.out.println("updation done");
+			}
+			else {
+				System.out.println("not found");
+			}
 			break;
 		case 7:
 			sc.close();

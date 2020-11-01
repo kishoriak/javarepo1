@@ -14,4 +14,10 @@ public interface ProductService {
 
 	void deleteProduct(int id);
 
+	Product displayById(int id);
+
+	boolean modifyData(int id, String nm, int qty);
+	
+	
+
 }

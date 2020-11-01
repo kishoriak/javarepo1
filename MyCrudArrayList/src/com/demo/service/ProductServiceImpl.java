@@ -20,10 +20,9 @@ public class ProductServiceImpl implements ProductService {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("enter id");
 		int id=sc.nextInt();
-		
 		System.out.println("enter name");
 		String nm=sc.next();
-		System.out.println("enter id");
+		System.out.println("enter qty");
 		int qty=sc.nextInt();
 		Product p=new Product(id,nm,qty);
 		productDao.addProduct(p);
@@ -42,10 +41,26 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public void deleteProduct(int id) {
-		productDao.searchById(id);
+		productDao.deleteProduct(id);
+	}
+
+	@Override
+	public Product displayById(int id) {
+		return productDao.displayById(id);
 		
 	}
-	
+	@Override
+	public boolean modifyData(int id, String nm, int qty) {
+		Product p=productDao.searchById(id);
+		if(p!=null) {
+		   p.setName(nm);
+		   p.setQty(qty);
+		   return true;
+		}
+		else {
+		   return false;
+		}
+	}
 	
 
 }
