@@ -14,22 +14,22 @@ public class TestCrudOperation {
 		int choice=0;
 		ProductService productService=new ProductServiceImpl();
 		do {
-		System.out.println("1. add \n2.search\n3display all\n4. delete\n5.display by id\n7. modify qty\n7. exit");
-		System.out.println("choice");
+		System.out.println("1. Add new product\n2.Search product by ID\n3Display all\n4. Delete by ID\n5.Modify Name\n6. Exit");
+		System.out.println("Enter choice");
 		choice=sc.nextInt();
 		switch(choice) {
 		case 1:
 			productService.addProduct();
 			break;
 		case 2:
-			System.out.println("enetr id");
+			System.out.println("Enter ID");
 			int id=sc.nextInt();
 			Product p=productService.searchProduct(id);
 			if(p!=null) {
 				System.out.println(p);
 			}
 			else {
-				System.out.println("not found");
+				System.out.println("Not found");
 			}
 			break;
 		case 3:
@@ -39,18 +39,35 @@ public class TestCrudOperation {
 			}
 			break;
 		case 4:
+			System.out.println("Enter ID");
+			int id2=sc.nextInt();
+			boolean p2=productService.deleteProduct(id2);
+			if(p2) {
+				System.out.println("Delete done");
+			}
+			else {
+				System.out.println("Not found");
+			}
 			break;
 		case 5:
+			System.out.println("Enter id");
+			int id3=sc.nextInt();
+			System.out.println("Enter name to modify");
+			String name=sc.next();
+			boolean p3=productService.modifyName(id3, name);
+			if(p3) {
+				System.out.println("Product modification done");
+			}
+			else {
+				System.out.println("Not found");
+			}
 			break;
 		case 6:
-			break;
-		case 7:
-			sc.close();
+		sc.close();
 			System.exit(0);
+			break;
 		}
 		}while(choice!=6);
-		
-
 	}
 
 }

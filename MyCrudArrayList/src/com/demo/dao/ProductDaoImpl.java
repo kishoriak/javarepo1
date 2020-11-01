@@ -33,4 +33,24 @@ public class ProductDaoImpl implements ProductDao{
 		return null;
 	}
 
+	@Override
+	public boolean deleteById(int id) {
+		int pos = plist.indexOf(new Product(id, null, 0));
+		if (pos != -1) {
+			plist.remove(pos);
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public boolean modifyName(int id, String name) {
+		int pos = plist.indexOf(new Product(id, null, 0));
+		if (pos != -1) {
+			plist.set(pos, new Product(0,name,0));
+			return true;
+		}
+		return false;
+	}
+
 }
