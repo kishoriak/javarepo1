@@ -14,7 +14,7 @@ public class TestCrudOperation {
 		int choice=0;
 		ProductService productService=new ProductServiceImpl();
 		do {
-		System.out.println("1. Add \n2. Search\n3. Display all\n4. delete\n5. Display by id\n6. Modify\n7. Exit");
+		System.out.println("1. Add \n2. Search\n3. Display all\n4. delete\n5. Display by id\n6. Modify the data\n7. Exit");
 		System.out.println("choice");
 		choice=sc.nextInt();
 		switch(choice) {
