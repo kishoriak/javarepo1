@@ -14,7 +14,7 @@ public class TestCrudOperation {
 		int choice=0;
 		ProductService productService=new ProductServiceImpl();
 		do {
-		System.out.println("1. Add new product\n2.Search product by ID\n3Display all\n4. Delete by ID\n5.Modify Quantity\n6. Exit");
+		System.out.println("1. Add new product\n2.Search product by ID\n3Display all\n4. Delete by ID\n5.Modify Name\n6. Exit");
 		System.out.println("Enter choice");
 		choice=sc.nextInt();
 		switch(choice) {
@@ -54,7 +54,7 @@ public class TestCrudOperation {
 			int id3=sc.nextInt();
 			System.out.println("Enter name to modify");
 			String name=sc.next();
-			boolean p3=productService.modifyQuantity(id3, name);
+			boolean p3=productService.modifyName(id3, name);
 			if(p3) {
 				System.out.println("Product modification done");
 			}

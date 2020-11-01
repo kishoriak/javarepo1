@@ -44,7 +44,7 @@ public class ProductDaoImpl implements ProductDao{
 	}
 
 	@Override
-	public boolean modifyQuantity(int id, String name) {
+	public boolean modifyName(int id, String name) {
 		int pos = plist.indexOf(new Product(id, null, 0));
 		if (pos != -1) {
 			plist.set(pos, new Product(0,name,0));

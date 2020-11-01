@@ -10,6 +10,6 @@ public interface ProductService {
 	List<Product> displayAll();
 	Product searchProduct(int id);
 	public boolean deleteProduct(int id);
-	public boolean modifyQuantity(int id, String name);
+	public boolean modifyName(int id, String name);
 
 }

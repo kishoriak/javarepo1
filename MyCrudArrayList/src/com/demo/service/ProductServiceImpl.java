@@ -47,8 +47,8 @@ public class ProductServiceImpl implements ProductService {
 
 
 	@Override
-	public boolean modifyQuantity(int id, String name) {
-		return productDao.modifyQuantity(id, name);
+	public boolean modifyName(int id, String name) {
+		return productDao.modifyName(id, name);
 	}
 	
 
