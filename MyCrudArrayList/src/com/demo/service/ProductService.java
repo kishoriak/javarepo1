@@ -12,4 +12,8 @@ public interface ProductService {
 
 	Product searchProduct(int id);
 
+	boolean deleteProduct(int id);
+
+	void modifyProductQ(Product pm, int qty);
+
 }

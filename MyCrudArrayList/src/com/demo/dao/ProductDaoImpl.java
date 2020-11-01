@@ -33,4 +33,19 @@ public class ProductDaoImpl implements ProductDao{
 		return null;
 	}
 
+	@Override
+	public boolean deleteById(int id) {
+		int pos=plist.indexOf(new Product(id,null,0));
+		if(pos!=-1) {
+			plist.remove(pos);
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public void modifyProductQ(Product pm, int qty) {
+		pm.setQty(qty);
+	}
+
 }
