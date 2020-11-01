@@ -12,4 +12,12 @@ public interface ProductService {
 
 	Product searchProduct(int id);
 
+	void deleteProduct(int id);
+
+	Product displayById(int id);
+
+	boolean modifyData(int id, String nm, int qty);
+	
+	
+
 }

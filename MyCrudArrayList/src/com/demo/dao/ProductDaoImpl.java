@@ -32,5 +32,18 @@ public class ProductDaoImpl implements ProductDao{
 		}
 		return null;
 	}
+    
+	
+	public void deleteProduct(int id) {
+		int pos=plist.indexOf(new Product(id,null,0));
+		plist.remove(pos);
+		
+	}
+
+	@Override
+	public Product displayById(int id) {
+		int pos=plist.indexOf(new Product(id,null,0));
+		return plist.get(pos);
+	}
 
 }
