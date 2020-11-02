@@ -40,9 +40,9 @@ public class TestCrudOperation {
 			break;
 		case 4:
 			System.out.println("Enter ID");
-			int id2=sc.nextInt();
-			boolean p2=productService.deleteProduct(id2);
-			if(p2) {
+			id=sc.nextInt();
+			boolean p1=productService.deleteProduct(id);
+			if(p1) {
 				System.out.println("Delete done");
 			}
 			else {
@@ -51,11 +51,11 @@ public class TestCrudOperation {
 			break;
 		case 5:
 			System.out.println("Enter id");
-			int id3=sc.nextInt();
+			id=sc.nextInt();
 			System.out.println("Enter name to modify");
 			String name=sc.next();
-			boolean p3=productService.modifyName(id3, name);
-			if(p3) {
+			p1=productService.modifyName(id, name);
+			if(p1) {
 				System.out.println("Product modification done");
 			}
 			else {
