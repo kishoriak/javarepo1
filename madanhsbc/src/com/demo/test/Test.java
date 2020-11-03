@@ -19,6 +19,7 @@ public class Test {
 		System.out.println("1. Create Notes \n2.Create Notes and Image\n3display all text notes\n4 Display All Image Notes\n5. exit");
 		System.out.println("choice");
 		choice=sc.nextInt();
+		sc.nextLine();
 		switch(choice) {
 		case 1:
 			System.out.println("enter Notes ");
@@ -31,6 +32,7 @@ public class Test {
 	    	note1 =sc.nextLine();
 	    	System.out.println("enter image url ");
 	    	String url1 =sc.nextLine();
+	    	sc.nextLine();
 	    	note.storeNote(note1,url1);
 			break;
 		case 3:
@@ -39,6 +41,7 @@ public class Test {
 			for(TextNote n:txtnote)
 			{
 				System.out.println("Text Note "+i+": "+n);
+				i++;
 			}
 			break;
 		case 4:
@@ -47,6 +50,7 @@ public class Test {
 			for(TextNote n:imgnote)
 			{
 				System.out.println("Text And Image Note "+j+": "+n);
+				j++;
 			}
 			break;
 
