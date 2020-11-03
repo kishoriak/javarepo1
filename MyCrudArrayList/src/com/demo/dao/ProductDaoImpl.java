@@ -48,6 +48,7 @@ public class ProductDaoImpl implements ProductDao{
 		return false;
 	}
 
+	
 	@Override
 	public boolean updateNameAndQty(int id, String nm, int qty) {
 		Product p=searchById(id);
@@ -58,6 +59,7 @@ public class ProductDaoImpl implements ProductDao{
 		}
 		return false;
 	}
+
 
 	@Override
 	public Product searchByName(String nm) throws ProductNotFoundException{
@@ -74,6 +76,7 @@ public class ProductDaoImpl implements ProductDao{
 		throw new ProductNotFoundException("product not found");
 		
 	}
+
 
 	@Override
 	public List<Product> sortData() {
