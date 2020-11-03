@@ -16,7 +16,7 @@ public class TextAndImageNote extends TextNote{
 	@Override
 	public String toString() {
 		super.toString();
-		return "Image Url : "+ imageUrl + "\nText Note :" + textNote;
+		return "Image Url : "+ imageUrl + "Text Note :" + textNote;
 	}
 	
 	

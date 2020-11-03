@@ -10,6 +10,7 @@ import com.demo.dao.NoteStoreInterface;
 
 public class Launcher {
 
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		NoteStoreInterface noteStore = new NoteStore();
@@ -20,14 +21,17 @@ public class Launcher {
 		noteStore.storeNote("second Note", "foo/bar/second.jpg");
 		//displaying all text notes
 		ArrayList<TextNote> arrtext = noteStore.getAllTextNotes();
+		int i =1;
 		for(TextNote a:arrtext) {
-			System.out.println(a);
+			System.out.println("textnote " + i + ": "+ a);
+			i++;
 		}
 		
 		//displaying all text and image notes
 		ArrayList<TextNote> arrtextandimage = noteStore.getAllTextAndImageNotes();
+		i = 1;
 		for(TextNote a:arrtextandimage) {
-			System.out.println(a);
+			System.out.println("text and image note" + i + ": "+ a);
 		}
 		
 		Scanner sc = new Scanner(System.in);
@@ -60,11 +64,15 @@ public class Launcher {
 				//for displaying all the notes both text and text andimage notes
 				ArrayList<TextNote> arr1 = noteStore.getAllTextNotes();
 				ArrayList<TextNote> arr2 = noteStore.getAllTextAndImageNotes();
+				i = 1;
 				for(TextNote a:arr1) {
-					System.out.println(a);
+					System.out.println("textnote" + i + ":"+ a);
+					i++;
 				}
+				i =1;
 				for (TextNote a : arr2) {
-					System.out.println(a);
+					System.out.println("text and image note " + i + ":"+ a);
+					i++;
 				}
 				break;
 			case 4:
