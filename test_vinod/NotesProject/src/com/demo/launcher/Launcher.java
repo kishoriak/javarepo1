@@ -32,6 +32,7 @@ public class Launcher {
 		i = 1;
 		for(TextNote a:arrtextandimage) {
 			System.out.println("text and image note" + i + ": "+ a);
+			i++;
 		}
 		
 		Scanner sc = new Scanner(System.in);
@@ -45,6 +46,7 @@ public class Launcher {
 			switch(choice) {
 			case 1:
 				System.out.println("Please write your note");
+				sc.next();
 				String textNote = sc.next();
 				flag = noteStore.storeNote(textNote); 
 				if(flag) {
@@ -55,8 +57,10 @@ public class Launcher {
 				break;
 			case 2:
 				System.out.println("Please write your text note");
+				sc.next();
 				String textNotei = sc.next();
 				System.out.println("Please write your image url");
+				sc.next();
 				String urlImage = sc.next();
 				flag = noteStore.storeNote(textNotei, urlImage);
 				break;
