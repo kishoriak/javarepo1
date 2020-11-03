@@ -13,4 +13,6 @@ public interface NotesDao {
 
 	List<TextAndImageNote> getAllTextAndImageNotes();
 
+	void storeNoteWithoutUrl(TextNotes n);
+
 }

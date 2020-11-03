@@ -29,13 +29,22 @@ public class NotesServiceImpl implements NotesService{
 	}
 
 	@Override
-	public List<TextNotes> getAllTextNotes() {
+	public List<TextNotes> displayTextNotes() {
 		return notesDao.getAllTextNotes();
 	}
 
 	@Override
-	public List<TextAndImageNote> getAllTextAndImageNotes() {
+	public List<TextAndImageNote> displayTextAndImageNotes() {
 		return notesDao.getAllTextAndImageNotes();
+	}
+	@Override
+	public void storeNoteWithoutUrl() {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Note");
+		String note=sc.nextLine();
+		TextNotes n=new TextNotes(note);
+		notesDao.storeNoteWithoutUrl(n);
+		
 	}
 
 }

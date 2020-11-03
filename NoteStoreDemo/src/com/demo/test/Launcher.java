@@ -15,7 +15,7 @@ public class Launcher {
 		int choice=0;
 		NotesService notesService=new NotesServiceImpl();
 		do {
-		System.out.println("1. Add new note \n2.Display text notes \n3. Display Text and images notes\n4. Exit");
+		System.out.println("1. Add new note with url \n2. Add new note without url \n3.Display text notes \n4. Display Text and images notes\n5. Exit");
 		System.out.println("Enter choice");
 		choice=sc.nextInt();
 		switch(choice) {
@@ -23,23 +23,26 @@ public class Launcher {
 			notesService.storeNote();
 			break;
 		case 2:
-			List<TextNotes> notelist=notesService.getAllTextNotes();
+			notesService.storeNoteWithoutUrl();
+			break;
+		case 3:
+			List<TextNotes> notelist=notesService.displayTextNotes();
 			for(TextNotes n1:notelist) {
 				System.out.println(n1);
 			}
 			break;
-		case 3:
-			List<TextAndImageNote> noteandimagelist= notesService.getAllTextAndImageNotes();
+		case 4:
+			List<TextAndImageNote> noteandimagelist= notesService.displayTextAndImageNotes();
 			for(TextAndImageNote n2:noteandimagelist) {
 				System.out.println(n2);
 			}
 			break;
-		case 4:
+		case 5:
 		sc.close();
 			System.exit(0);
 			break;
 		}
-		}while(choice!=6);
+		}while(choice!=5);
 	}
 
 	}

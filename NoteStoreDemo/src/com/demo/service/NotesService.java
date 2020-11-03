@@ -9,8 +9,10 @@ public interface NotesService {
 
 	void storeNote();
 
-	List<TextNotes> getAllTextNotes();
+	List<TextNotes> displayTextNotes();
 
-	List<TextAndImageNote> getAllTextAndImageNotes();
+	List<TextAndImageNote> displayTextAndImageNotes();
+
+	void storeNoteWithoutUrl();
 
 }

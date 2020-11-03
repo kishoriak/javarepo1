@@ -29,4 +29,9 @@ public class NotesDaoImpl implements NotesDao{
 	public List<TextAndImageNote> getAllTextAndImageNotes() {
 		return textandimagelist;
 	}
+	@Override
+	public void storeNoteWithoutUrl(TextNotes n) {
+		textlist.add(n);
+		
+	}
 }
