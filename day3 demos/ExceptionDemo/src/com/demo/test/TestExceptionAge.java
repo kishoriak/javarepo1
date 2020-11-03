@@ -12,7 +12,7 @@ public class TestExceptionAge {
 		    MyService ob=new MyService();
 		    ob.acceptData();
 		}catch(AgeException e){
-			System.out.println("age not in range");
+			System.out.println("age not in range\n");
 		}
 	}
 
