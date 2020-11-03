@@ -13,12 +13,13 @@ public interface ProductDao {
 
 	Product searchById(int id);
 
-	boolean updateName(int id, String nm);
-
-	boolean updateNameAndQty(int id, String nm, int qty);
+	int deleteProduct(Product p1);
 
 	Product searchByName(String nm) throws ProductNotFoundException;
 
 	List<Product> sortData();
+
+	boolean updateNameAndQty(int id, String nm, int qty);
+	
 
 }

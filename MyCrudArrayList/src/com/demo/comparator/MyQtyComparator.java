@@ -8,7 +8,7 @@ public class MyQtyComparator implements Comparator<Product> {
 
 	@Override     
 	public int compare(Product p1, Product p2) {
-		System.out.println("comparator"+p1.getQty()+"---"+p2.getQty());
+		//System.out.println("comparator"+p1.getQty()+"---"+p2.getQty());
 		if(p1.getQty()<p2.getQty()) {
 			return -1;
 		}

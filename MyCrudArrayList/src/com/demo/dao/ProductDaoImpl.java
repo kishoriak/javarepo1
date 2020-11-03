@@ -48,6 +48,7 @@ public class ProductDaoImpl implements ProductDao{
 		return false;
 	}
 
+	
 	@Override
 	public boolean updateNameAndQty(int id, String nm, int qty) {
 		Product p=searchById(id);
@@ -58,6 +59,7 @@ public class ProductDaoImpl implements ProductDao{
 		}
 		return false;
 	}
+
 
 	@Override
 	public Product searchByName(String nm) throws ProductNotFoundException{
@@ -75,6 +77,7 @@ public class ProductDaoImpl implements ProductDao{
 		
 	}
 
+
 	@Override
 	public List<Product> sortData() {
 		Collections.sort(plist,new MyQtyComparator());
@@ -82,5 +85,17 @@ public class ProductDaoImpl implements ProductDao{
 		
 		//display first 3 products with highest qty
 	}
+
+	@Override
+	public int deleteProduct(Product p1) {
+		int size=plist.size();
+		plist.remove(p1);
+		if(plist.size()<size) {
+			return 1;
+		}
+		else 
+			return 0;
+	}
+
 
 }
