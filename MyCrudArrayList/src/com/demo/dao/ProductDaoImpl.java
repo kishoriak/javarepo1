@@ -83,4 +83,15 @@ public class ProductDaoImpl implements ProductDao{
 		//display first 3 products with highest qty
 	}
 
+	@Override
+	public void deleteProduct(int id) {
+		
+		plist.remove(searchById(id));
+	}
+
+	@Override
+	public Product displayById(int id) {
+		return searchById(id);
+	}
+
 }

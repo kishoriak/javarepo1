@@ -21,4 +21,8 @@ public interface ProductDao {
 
 	List<Product> sortData();
 
+	void deleteProduct(int id);
+
+	Product displayById(int id);
+
 }
