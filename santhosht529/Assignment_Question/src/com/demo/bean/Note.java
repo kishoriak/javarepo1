@@ -2,7 +2,7 @@ package com.demo.bean;
 
 public class Note {
 
-	private String MyNotes;
+	protected String MyNotes;
 	//default Constructor
 	public Note() {
 		super();
@@ -26,11 +26,9 @@ public class Note {
 	//to-string method to display
 	@Override
 	public String toString() {
-		return " " + MyNotes + "]";
+		return " Text Note : " + MyNotes ;
+	}
+	
 	}
 
-	
-	
-	
-	
-}
+

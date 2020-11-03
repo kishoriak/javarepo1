@@ -28,6 +28,7 @@ public class NoteStore implements NoteStoreInterface{
 //			System.out.println("enter text to store");
 //			String text=sc.nextLine();
 			Notelist.add(new TextNote(text));
+			// System.out.println("note added foo");
 //			
 //			break;
 //		case 2:
@@ -42,9 +43,7 @@ public class NoteStore implements NoteStoreInterface{
 				
 	
 	public void storeNote(String text, String url) {
-		
-		
-		
+	
 		Notelist.add(new TextAndImageNote(text,url));
 	
 
@@ -71,5 +70,10 @@ public class NoteStore implements NoteStoreInterface{
 		}
 				
 	}
+	
+	public void printall() {
+		System.out.println(Notelist);
+		}
+	}
 		
-}
+

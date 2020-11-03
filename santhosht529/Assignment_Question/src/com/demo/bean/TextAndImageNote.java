@@ -11,9 +11,9 @@ public class TextAndImageNote extends Note{
 		// TODO Auto-generated constructor stub
 	}
 	//Parametrized constructor
-	public TextAndImageNote(String imageurl, String url) {
-		super();
-		this.imageurl = imageurl;
+	public TextAndImageNote(String text, String url) {
+		super(text);
+		this.imageurl = url;
 	}
 	//getter and setter methods
 	public String getImageurl() {
@@ -23,11 +23,11 @@ public class TextAndImageNote extends Note{
 	public void setImageurl(String imageurl) {
 		this.imageurl = imageurl;
 	}
-	// to string method
 	@Override
 	public String toString() {
-		return "TextAndImageNote [imageurl=" + imageurl + "]";
+		return  super.toString()+ "| its image url :" + imageurl + "\n";
 	}
+	
 	
 	
 

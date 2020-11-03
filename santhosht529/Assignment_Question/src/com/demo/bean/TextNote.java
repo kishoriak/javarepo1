@@ -15,8 +15,7 @@ public class TextNote extends Note{
 	//to-string method to display
 	@Override
 	public String toString() {
-		return "TextNote " + getMyNotes() + ", toString()=" + super.toString() + ", getClass()="
-				+ getClass() + ", hashCode()=" + hashCode() + "]";
+		return  super.toString() +"\n";
 	}
 	
 	
