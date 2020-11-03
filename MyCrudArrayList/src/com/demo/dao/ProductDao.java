@@ -3,6 +3,7 @@ package com.demo.dao;
 import java.util.List;
 
 import com.demo.bean.Product;
+import com.demo.exception.ProductNotFoundException;
 
 public interface ProductDao {
 
@@ -12,8 +13,12 @@ public interface ProductDao {
 
 	Product searchById(int id);
 
-	void deleteProduct(int id);
+	boolean updateName(int id, String nm);
 
-	Product displayById(int id);
+	boolean updateNameAndQty(int id, String nm, int qty);
+
+	Product searchByName(String nm) throws ProductNotFoundException;
+
+	List<Product> sortData();
 
 }
