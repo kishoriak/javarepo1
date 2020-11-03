@@ -12,6 +12,10 @@ public interface ProductService {
 	List<Product> displayAll();
     //search product by id
 	Product searchProduct(int id);
+	
+	int deleteProd(int id);
+	void displayById(int id);
+	void modify(int id, int qty);
 
 	boolean modifyName(int id, String nm);
 

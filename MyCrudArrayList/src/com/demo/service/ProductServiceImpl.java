@@ -6,7 +6,6 @@ import java.util.Scanner;
 import com.demo.bean.Product;
 import com.demo.dao.ProductDao;
 import com.demo.dao.ProductDaoImpl;
-import com.demo.exception.ProductNotFoundException;
 
 public class ProductServiceImpl implements ProductService {
 	private ProductDao productDao;
@@ -15,8 +14,7 @@ public class ProductServiceImpl implements ProductService {
 		productDao=new ProductDaoImpl();
 		
 	}
-    
-	//add product in arraylist
+
 	@Override
 	public void addProduct() {
 		Scanner sc=new Scanner(System.in);
@@ -24,17 +22,9 @@ public class ProductServiceImpl implements ProductService {
 		int id=sc.nextInt();
 		System.out.println("enter name");
 		String nm=sc.next();
-		System.out.println("enter desc");
-		String desc=sc.next();
 		System.out.println("enter qty");
 		int qty=sc.nextInt();
-		Product p=new Product(id,nm,qty,desc);
-		/*
-		 * Product p1=new Product(); p1.setId(p.getId()); p1.setName(p.getName());
-		 * p1.setQty(p.getQty());
-		 */
-		//Object.clone();
-		Product p1=p.clone();
+		Product p=new Product(id,nm,qty);
 		productDao.addProduct(p);
 	}
 
@@ -50,24 +40,18 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public boolean modifyName(int id, String nm) {
-		return productDao.updateName(id,nm);
+	public int deleteProd(int id) {
+		return productDao.deleteProduct(id);
 	}
 
 	@Override
-	public boolean modifyNameandQty(int id, String nm, int qty) {
-		return productDao.updateNameAndQty(id,nm,qty);
+	public void displayById(int id) {
+		productDao.displayById(id);
 	}
 
 	@Override
-	public Product searchByName(String nm) throws ProductNotFoundException {
-		return productDao.searchByName(nm);
-	}
-
-	@Override
-	public List<Product> sortData() {
-		return productDao.sortData();
-		
+	public void modify(int id, int qty) {
+		productDao.modify(id, qty);
 	}
 	
 
