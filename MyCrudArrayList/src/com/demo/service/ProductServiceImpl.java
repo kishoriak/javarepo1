@@ -20,13 +20,16 @@ public class ProductServiceImpl implements ProductService {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("enter id");
 		int id=sc.nextInt();
-		
-		System.out.println("enter name");
-		String nm=sc.next();
 		System.out.println("enter quantity");
 		int qty=sc.nextInt();
-		Product p=new Product(id,nm,qty);
+		sc.nextLine();
+		System.out.println("enter name");
+		String nm=sc.nextLine();
+		System.out.println("enter description");
+		String desc=sc.nextLine();
+		Product p=new Product(id,nm,qty,desc);
 		productDao.addProduct(p);
+		sc.close();
 	}
 
 	@Override
